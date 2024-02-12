@@ -20,20 +20,21 @@ public class VerifyNews {
 	HomePage hp;
 	News n;
 	NewsInfoPage ns;
-	
-	List<String> newsList;
 	List<String> homePageNewsList;
+	List<String> newsList;
+	
 	@Given("the user is on News Page")
 	public void the_user_is_on_news_page() {
 		BaseClass.getLogger().info("Goto BeCognizant News page");
 		hp=new HomePage(BaseClass.getDriver());
 		homePageNewsList=hp.headerText();
 		hp.clickSeeAllLink();
-		n=new News(BaseClass.getDriver());
+		
 	}
 
 	@Given("user verifies the news headings")
 	public void user_verifies_the_news_headings() {
+		n=new News(BaseClass.getDriver());
 		newsList=n.getNewsText();
 		System.out.println(homePageNewsList.size());
 		System.out.println(newsList.size());

@@ -36,7 +36,7 @@ public class News extends BasePage {
 	}
 	
 	public List<String> getNewsText(){
-	//	this.getlist();
+		this.getlist();
 		List<String> newsHeadings=new ArrayList<String>();
 		for(WebElement ele:newsLinks)
 		{

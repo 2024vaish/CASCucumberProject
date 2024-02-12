@@ -98,6 +98,7 @@ public class HomePage extends BasePage{
 		this.getNewsLinks();
 		System.out.println("Home Page NewsLinks Count :"+newsLinks.size());
 		for(WebElement ele:newsLinks) {
+			System.out.println(ele.getText());
 			text.add(ele.getText());
 		}
 		System.out.println("Home Page News Count :"+text.size());
